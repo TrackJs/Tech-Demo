@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Context";
+    Layout = "~/Views/_Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <h2>Context</h2>    
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div>
+            <button id="tjs-js-good-button" type="button" class="btn btn-lg btn-success">Do All the Good Things</button>
+            <span id="tjs-js-good-output"></span>
+        </div>
+        <hr />
+        <div>
+            <button id="tjs-js-bad-button" type="button" class="btn btn-lg btn-danger">Do All the Bad Things</button>
+            <span id="tjs-js-bad-output"></span>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <ul id="tjs-js-consoleList"></ul>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Content/js/transmission.js"></script>
+    <script src="~/Content/js/context.js"></script>
+}

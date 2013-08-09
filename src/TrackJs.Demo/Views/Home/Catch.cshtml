@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Catch";
+    Layout = "~/Views/_Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <h2>Catch</h2>    
+</div>
+
+<div class="row">
+    <div class="col-lg-8">
+        <form>
+            <fieldset>
+                <legend>Calculate Area</legend>
+                <div class="form-group">
+                    <label>
+                        <div>Height</div>
+                        <input type="text" id="tjs-js-height" class="form-control" placeholder="Height" />
+                    </label>  
+                </div>
+                <div class="form-group">
+                    <label>
+                        <div>Width</div>
+                        <input type="text" id="tjs-js-width" class="form-control" placeholder="Width" />
+                    </label>  
+                </div>
+                <button id="tjs-js-button-calculate" type="button" class="btn btn-lg btn-success">Calculate Area</button>
+                <hr/>
+                <div class="form-group">
+                    <label>
+                        <span>Area: </span>
+                        <span id="tjs-js-area-output"></span>
+                    </label> 
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+    <div class="col-lg-4">
+        <ul id="tjs-js-consoleList"></ul>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/Content/js/transmission.js"></script>
+    <script src="~/Content/js/catch.js"></script>
+}

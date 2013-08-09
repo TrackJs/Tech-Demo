@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,700,600' rel='stylesheet' media="screen" />
+    <link href="/Content/css/lib/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="/Content/css/style.min.css" rel="stylesheet" media="screen" />
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top tjs-main-nav">
+        <div class="container">
+            <a class="navbar-brand tjs-nav-logo" href="/">{Track:js} Tech Demo</a>
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.ActionLink("Console", "Console", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Transmission", "Transmission", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Context", "Context", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Catch", "Catch", "Home")
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <div id="tjs-main" class="container">
+        @RenderBody()    
+    </div>
+    
+    <script src="~/Content/js/lib/jquery.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

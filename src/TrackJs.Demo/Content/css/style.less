@@ -1,0 +1,43 @@
+﻿@white:         #fff;
+@tjs-dark:      #403f3f;
+@tjs-orange:    #eb503e;
+@tjs-yellow:    #f1c055;
+@tjs-darkyellow:#cba630;
+
+.text-shadow (@string: 0 1px 1px rgba(0, 0, 0, 0.5)) {
+	text-shadow: @string;
+}
+
+body {
+    font-family: 'Open-sans', sans-serif;
+    color: @white;
+    background-color: @tjs-dark;
+
+    legend {
+        color: #EEE;
+    }
+}
+
+.tjs-main-nav {
+    background-color: @tjs-orange;
+
+    .tjs-nav-logo {
+        color: @white !important;
+        font-size: 28px;
+        font-family: 'Abel', monospace;
+        text-decoration: none;
+        .text-shadow();
+    }
+
+    li > a { 
+        color: @white !important;
+        font-size: 16px;
+        &:hover,&:active {
+            color: @tjs-dark !important;
+        }
+    }
+}
+
+#tjs-main {
+    margin-top: 50px;
+}
