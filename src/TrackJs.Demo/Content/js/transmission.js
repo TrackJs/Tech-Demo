@@ -33,8 +33,8 @@
 
     for (var i = 0; i < consoleFns.length; i++) {
         (function (consoleFn) {
-            var originalFn = console[consoleFn] || fallbackFn;
-            console[consoleFn] = function () {
+            var originalFn = consoleObj[consoleFn] || fallbackFn;
+            consoleObj[consoleFn] = function () {
                 var args = Array.prototype.slice.call(arguments);
                 if (config.transmit) console.transmit(consoleFn, args);
                 if (config.domDisplay) printDom(consoleFn, args);
@@ -185,4 +185,5 @@
     //};
 
 
+    window.console = console;
 })(window.console, window.jQuery);

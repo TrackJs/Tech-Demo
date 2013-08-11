@@ -1,8 +1,15 @@
 ﻿(function (console, $) {
 
-    // HERES ABOUT WHERE WE LEFT OFF WITH TRANSMISSION, CONTEXT ABSTRACTED
-
-    var getContext = function() {};
+    var getContext = function () {
+        return {
+            userAgent: window.navigator.userAgent,
+            location: window.location.toString(),
+            windowDimension: {
+                width: $(window).width(),
+                height: $(window).height()
+            }
+        };
+    };
 
     var transmissionCount = 0,
     lastTransmissionAttempt = new Date().getTime();
@@ -44,21 +51,15 @@
 
 
 
-    // SIMPLE USER CONTEXT
-    
-
-    //getContext = function() {
-    //    return {
-    //        userAgent: window.navigator.userAgent,
-    //        location: window.location.toString(),
-    //        windowDimension: {
-    //            width: $(window).width(),
-    //            height: $(window).height()
-    //        }
-    //    };
-    //};
 
 
 
 
+
+
+
+
+
+
+    window.console = console;
 })(window.console, window.jQuery);

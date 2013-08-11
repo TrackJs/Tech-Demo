@@ -37,7 +37,7 @@
     //var consoleObj = console || {};
     //var consoleFn = consoleObj.log || function () { };
     
-    //console.log = function() {
+    //consoleObj.log = function() {
     //    var args = Array.prototype.slice.call(arguments);
     //    return consoleFn.apply(this, args);
     //};
@@ -63,8 +63,8 @@
     
     //for (var i = 0; i < consoleFns.length; i++) {
     //    (function (consoleFn) {
-    //        var originalFn = console[consoleFn] || fallbackFn;
-    //        console[consoleFn] = function () {
+    //        var originalFn = consoleObj[consoleFn] || fallbackFn;         
+    //        consoleObj[consoleFn] = function () {
     //            var args = Array.prototype.slice.call(arguments);
     //            return originalFn.apply(this, args);
     //        };
@@ -100,8 +100,8 @@
 
     //for (var i = 0; i < consoleFns.length; i++) {
     //    (function (consoleFn) {
-    //        var originalFn = console[consoleFn] || fallbackFn;
-    //        console[consoleFn] = function () {
+    //        var originalFn = consoleObj[consoleFn] || fallbackFn;
+    //        consoleObj[consoleFn] = function () {
     //            var args = Array.prototype.slice.call(arguments);
     //            if (config.domDisplay) printDom(consoleFn, args);
     //            if (config.consoleDisplay) return originalFn.apply(this, args);
@@ -109,5 +109,9 @@
     //    })(consoleFns[i]);
     //}
 
-    
+
+
+
+
+    window.console = console;
 })(window.console, window.jQuery);
