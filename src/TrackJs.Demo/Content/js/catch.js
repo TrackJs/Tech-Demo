@@ -7,11 +7,11 @@
     var room = {
       
         getWidth: function() {
-            return parseInt($('tjs-js-width', 10).val());
+            return parseInt($('tjs-js-width').val(), 10);
         },
         
         getHeight: function() {
-            return parseInt($('tjs-js-height', 10).val());
+            return parseInt($('tjs-js-height').val(), 10);
         },
         
         printArea: function () {
@@ -81,7 +81,7 @@
 
     //    getWidth: function () {
     //        try {
-    //            return parseInt($('tjs-js-width', 10).val());
+    //            return parseInt($('tjs-js-width').val(), 10);
     //        } catch(error) {
     //            return console.error(error.name, error.message, error.stack);
     //        }
@@ -89,7 +89,7 @@
 
     //    getHeight: function () {
     //        try {
-    //            return parseInt($('tjs-js-height', 10).val());
+    //            return parseInt($('tjs-js-height').val(), 10);
     //        } catch(error) {
     //            return console.error(error.name, error.message, error.stack);
     //        }
